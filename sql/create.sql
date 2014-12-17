@@ -5,7 +5,7 @@ create table maker (
   del_flg boolean,
   insert_date timestamp default now(),
   update_date timestamp default now()
-)
+);
 
 create table car (
   car_id serial primary key,
