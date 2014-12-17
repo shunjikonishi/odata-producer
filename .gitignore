@@ -1,0 +1,10 @@
+.DS_Store
+target
+dist
+/.idea
+/*.iml
+/.classpath
+/.project
+/.settings
+*.sublime-*
+node_modules
