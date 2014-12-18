@@ -18,9 +18,7 @@ public class Car {
 
 	private String car_name;
 
-	@JoinColumn(name = "maker_id")
-	@ManyToOne(fetch=FetchType.LAZY)
-	private Maker maker;
+	private Integer maker_id;
 
 	private Integer display_Order;
 

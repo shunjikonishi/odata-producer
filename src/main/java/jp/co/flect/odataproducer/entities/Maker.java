@@ -2,8 +2,10 @@ package jp.co.flect.odataproducer.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Id;
 import java.util.Date;
+import java.util.List;
 
 import lombok.Data;
 

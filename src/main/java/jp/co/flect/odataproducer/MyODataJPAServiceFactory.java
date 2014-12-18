@@ -12,6 +12,7 @@ import org.apache.olingo.odata2.api.processor.ODataErrorCallback;
 import org.apache.olingo.odata2.api.processor.ODataErrorContext;
 import org.apache.olingo.odata2.api.processor.ODataResponse;
 import org.apache.olingo.odata2.jpa.processor.api.exception.ODataJPAException;
+import org.apache.olingo.odata2.jpa.processor.api.exception.ODataJPAErrorCallback;
 
 public class MyODataJPAServiceFactory extends ODataJPAServiceFactory {
 	private static final String PUNIT_NAME = "defaultPersistenceUnit";
@@ -36,25 +37,14 @@ public class MyODataJPAServiceFactory extends ODataJPAServiceFactory {
 		return super.getCallback(callbackInterface);
 	}
 
-	public static class MyErrorCallback implements ODataErrorCallback {
+	public static class MyErrorCallback extends ODataJPAErrorCallback {
+
 		@Override
 		public ODataResponse handleError(final ODataErrorContext context) throws ODataApplicationException {
-			final String SEPARATOR = " : ";
 			Throwable t = context.getException();
-			if (t != null) {
-				System.out.println("*************** " + t.toString() + " *********************");
-				t.printStackTrace();
-			} else {
-				System.out.println("*************** Unknown error *********************");
-			}
-			if (t instanceof ODataJPAException && t.getCause() != null) {
-				StringBuilder errorBuilder = new StringBuilder();
-				errorBuilder.append(t.getCause().getClass().toString());
-				errorBuilder.append(SEPARATOR);
-				errorBuilder.append(t.getCause().getMessage());
-				context.setInnerError(errorBuilder.toString());
-			}
-			return EntityProvider.writeErrorDocument(context);
+			System.out.println("*************** " + t.toString() + " *********************");
+			t.printStackTrace();
+			return super.handleError(context);
 		}
 	}
 }
