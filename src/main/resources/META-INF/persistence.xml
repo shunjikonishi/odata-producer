@@ -5,8 +5,6 @@
 
 	<persistence-unit name="defaultPersistenceUnit" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-		<class>jp.co.flect.odatasample.entities.Car</class>
-		<class>jp.co.flect.odatasample.entities.Maker</class>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
 			<property name="hibernate.show_sql" value="true"/>

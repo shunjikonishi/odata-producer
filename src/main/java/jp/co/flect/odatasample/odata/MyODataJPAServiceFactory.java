@@ -23,8 +23,8 @@ public class MyODataJPAServiceFactory extends ODataJPAServiceFactory {
 	@Override
 	public ODataJPAContext initializeODataJPAContext() throws ODataJPARuntimeException {
 		ODataJPAContext context = getODataJPAContext();
-		context.setEntityManagerFactory(EntityManagerFactoryHolder.getInstance());
-		context.setPersistenceUnitName(EntityManagerFactoryHolder.PUNIT_NAME);
+		context.setEntityManagerFactory(HerokuEntityManagerFactory.getInstance());
+		context.setPersistenceUnitName(HerokuEntityManagerFactory.PUNIT_NAME);
 		return context;
 	}
 

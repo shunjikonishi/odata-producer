@@ -7,7 +7,7 @@ import java.net.URISyntaxException;
 import java.util.Map;
 import java.util.HashMap;
 
-public class EntityManagerFactoryHolder {
+public class HerokuEntityManagerFactory {
 
 	public static final String PUNIT_NAME = "defaultPersistenceUnit";
 	private static final EntityManagerFactory INSTANCE;
