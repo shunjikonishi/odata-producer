@@ -13,7 +13,7 @@
  
     <init-param>
       <param-name>org.apache.olingo.odata2.service.factory</param-name>
-      <param-value>jp.co.flect.odatasample.odata.MyODataJPAServiceFactory</param-value>
+      <param-value>jp.co.flect.odataproducer.MyODataJPAServiceFactory</param-value>
     </init-param>
  
     <load-on-startup>1</load-on-startup>

@@ -1,4 +1,4 @@
-package jp.co.flect.odatasample.odata;
+package jp.co.flect.odataproducer;
 
 import org.apache.olingo.odata2.jpa.processor.api.ODataJPAServiceFactory;
 import org.apache.olingo.odata2.jpa.processor.api.ODataJPAContext;

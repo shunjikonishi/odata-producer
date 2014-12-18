@@ -1,4 +1,4 @@
-package jp.co.flect.odatasample.entities;
+package jp.co.flect.odataproducer.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
