@@ -20,9 +20,9 @@ public class Car {
 
 	private Integer maker_id;
 
-	private Integer display_Order;
+	private Integer display_order;
 
-	private Boolean del_Flg;
+	private Boolean del_flg;
 
 	private Date insert_date;
 
