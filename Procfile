@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/dependency/webapp-runner-7.0.40.0.jar --port $PORT target/heroku-sample
+web: java $JAVA_OPTS -jar target/dependency/webapp-runner-7.0.40.0.jar --port $PORT target/odata-producer
