@@ -2,9 +2,6 @@ package jp.co.flect.odataproducer.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.FetchType;
 import java.util.Date;
 
 import lombok.Data;
